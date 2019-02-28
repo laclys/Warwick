@@ -2,22 +2,20 @@
   "name": "Warwick",
   "version": "1.0.0",
   "description": "- about webpack4",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/laclys/Warwick.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Lac",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/laclys/Warwick/issues"
   },
   "homepage": "https://github.com/laclys/Warwick#readme",
   "devDependencies": {
+    "webpack": "^4.29.6",
     "webpack-cli": "^3.2.3"
   }
 }
