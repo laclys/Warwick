@@ -2,7 +2,9 @@
   "name": "Warwick",
   "version": "1.0.0",
   "description": "- about webpack4",
-  "scripts": {},
+  "scripts": {
+    "bundle": "webpack"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/laclys/Warwick.git"
@@ -15,6 +17,7 @@
   },
   "homepage": "https://github.com/laclys/Warwick#readme",
   "devDependencies": {
+    "file-loader": "^3.0.1",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.2.3"
   }
