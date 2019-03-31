@@ -6,17 +6,29 @@ module.exports = {
     main: './src/index.js'
   },
   module: {
-    rules:[{
+    rules:[
+      {
       test: /\.(jpg|png|gif)$/,
       use: {
-        loader: 'file-loader',
+        loader: 'url-loader',
         options: {
           // placeholder
           name: '[name]_[hash].[ext]',
-          outputPath: 'images/'
+          outputPath: 'images/',
+          limiit: 2048
         }
       }
-    }]
+    },
+      {
+      test: /\.scss$/,
+      use: [
+        'style-loader',
+        'css-loader', 
+        'sass-loader',
+        'postcss-loader'
+      ]
+    }
+  ]
   },
   output:{
     filename: 'bundle.js',
