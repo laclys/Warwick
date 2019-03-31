@@ -15,3 +15,10 @@ postcss-loader：
 新建postcss.config.js用作postcss-loader的配置文件
 这里我们想要让webpack帮我们添加厂商前缀就要使用到Postcss-loader中名为 authprefixer的插件
 
+
+plugin 可以在webpack运行到某个时刻的时候，帮助我们做一些事情 (类似于 vue 、react 的生命周期函数 ，在 特定的时候 执行某些配置)
+
+htmlwebpackplugin会在打包结束后，自动生成一个html文件，并把打包生成的js文件自动引入到这个html文件中
+
+cleanwebpackplugin 打包前，清空dist文件
+

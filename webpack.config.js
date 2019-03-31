@@ -1,4 +1,8 @@
 const path = require('path')
+const Htmlwebpackplugin = require('html-webpack-plugin')
+const CleanWebpackPlugin = require('clean-webpack-plugin')
+
+// plugin 可以在webpack运行到某个时刻的时候帮你做一些事
 
 module.exports = {
   mode: 'development',
@@ -36,6 +40,14 @@ module.exports = {
     }
   ]
   },
+  plugins: [
+    new Htmlwebpackplugin({
+    template: 'src/index.html'
+  }),
+  new CleanWebpackPlugin({
+    cleanAfterEveryBuildPatterns: ['dist']
+  }) // 打包之前先运行
+],
   output:{
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
