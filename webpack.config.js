@@ -23,7 +23,13 @@ module.exports = {
       test: /\.scss$/,
       use: [
         'style-loader',
-        'css-loader', 
+        {
+          loader: 'css-loader',
+          options: {
+            importLoaders: 2, // 通过@import 引入的css文件也要去走前两个loader
+            modules: true // 开启css模块化打包
+          }
+        },
         'sass-loader',
         'postcss-loader'
       ]
